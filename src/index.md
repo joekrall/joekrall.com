@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Home
+tags: page
 ---
 
 # Welcome
