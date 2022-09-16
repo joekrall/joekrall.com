@@ -3,6 +3,6 @@ layout: base
 title: Home
 ---
 
-# My Eleventy Site
+# Welcome
 
-I am a site built with [Eleventy](https://www.11ty.io/).
+This is a site built with [Eleventy](https://www.11ty.io/).
