@@ -1,7 +1,11 @@
 module.exports = function(eleventyConfig) {
-  // Input Directory : src Output directory: _site
-
   return {
-      dir: { input: 'src', output: '_site' }
+      dir: { 
+        input: 'src',
+        data: "_data",
+        includes: "_includes",
+        layouts: "_layouts",
+        output: '_site' 
+      }
   }; 
 };
