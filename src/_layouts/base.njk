@@ -11,10 +11,11 @@
     <title>Joe Krall - {{title}}</title>
   </head>
  <body>
-  {% include "partials/_navigation.njk" %}
-  <main> 
-    {{content | safe}}
-  </main>
-  {% include "partials/_footer.njk" %}
+  <div class="flex-wrapper">
+    {% include "partials/_navigation.njk" %}
+    <main> 
+      {{content | safe}}
+    </main>
+  </div>
   </body>
 </html>

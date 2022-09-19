@@ -1,7 +1,12 @@
 <!-- _includes/partials/_navigation.njk-->
 <nav>
+    <h1>Joe Krall</h1>
+    <ul>
     {%- for item in collections.page -%}
-        <a href="{{ item.url }}">{{ item.data.title }}</a>
+        <ul>
+            <a href="{{ item.url }}">{{ item.data.title }}</a>
+        </ul>
     {%- endfor -%}
+    </ul>
 </nav>
 
