@@ -32,8 +32,6 @@ a:visited {
 
 nav {
   padding-left: 1rem;
-  padding-bottom: 1em;
-  border-bottom: 1px solid #000;
 }
 @media screen and (min-width:1025px) {
   nav {
@@ -81,6 +79,11 @@ main > h1 {
   }
 }
 
+.nav-wrapper {
+  display: inline-block;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #000;
+}
 @media screen and (min-width:1025px) {
   .nav-wrapper {
      
@@ -88,6 +91,20 @@ main > h1 {
 }
 @media screen and (max-width:1024px) {
   .nav-wrapper {
+
+  }
+}
+
+.main-wrapper {
+  display: inline-block;
+}
+@media screen and (min-width:1025px) {
+  .main-wrapper {
+     
+  }
+}
+@media screen and (max-width:1024px) {
+  .main-wrapper {
 
   }
 }

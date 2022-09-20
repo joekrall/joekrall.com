@@ -13,8 +13,10 @@
  <body>
   <div class="site-wrapper" style="position:relative">
     {% include "partials/_navigation.njk" %}
-    <main> 
+    <main>
+      <div class="main-wrapper">
       {{content | safe}}
+      </div>
     </main>
   </div>
   </body>
