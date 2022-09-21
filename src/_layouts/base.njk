@@ -10,14 +10,11 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
     <title>Joe Krall - {{title}}</title>
   </head>
- <body>
-  <div class="site-wrapper" style="position:relative">
+  <body class="flexerrific-flexifier">
     {% include "partials/_navigation.njk" %}
-    <main>
-      <div class="main-wrapper">
+    {# <div class="spacer"></div> #}
+    <main class="main-flexi-wrap">
       {{content | safe}}
-      </div>
     </main>
-  </div>
   </body>
 </html>
