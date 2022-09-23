@@ -42,7 +42,7 @@ main > h1 {
   .flexerrific-flexifier {
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: cente r;
   }
 }
 @media screen and (max-width:1024px) {
@@ -52,14 +52,15 @@ main > h1 {
 }
 
 .nav-flexi-wrap {
+  position: relative;
   display: inline-block;
   padding-bottom: 1rem;
   border-bottom: 1px solid #000;
 }
 @media screen and (max-width:1024px) {
   .nav-flexi-wrap {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
 
