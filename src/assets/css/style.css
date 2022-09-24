@@ -40,7 +40,6 @@ main > h1 {
 
 .flexerrific-flexifier {
   display: flex;
-  padding-top: 1rem;
   margin-left: 6rem;
   margin-right: 6rem;
 }
@@ -49,10 +48,12 @@ main > h1 {
     flex-direction: row;
     justify-content: center;
     align-items: first baseline;
+    padding-top: 3rem;
   }
 }
 @media screen and (max-width:1024px) {
   .flexerrific-flexifier {
+    padding-top: 1rem;
     flex-direction: column;
   }
 }
@@ -65,7 +66,7 @@ main > h1 {
 }
 @media screen and (min-width:1025px) {
   .nav-flexi-wrap {
-    margin-right: 12rem;
+    margin-right: 9rem;
   }
 }
 @media screen and (max-width:1024px) {
