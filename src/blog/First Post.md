@@ -2,6 +2,7 @@
 title: First Post
 layout: blog
 tags: post
+date: Created
 ---
 
 # First Post

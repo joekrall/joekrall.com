@@ -2,6 +2,7 @@
 title: Second Post
 layout: blog
 tags: post
+date: Created
 ---
 
 # Second Post
