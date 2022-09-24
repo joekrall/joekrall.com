@@ -68,6 +68,11 @@ main > h1 {
     margin-right: 2rem;
   }
 }
+@media screen and (max-width:1024px) {
+  .nav-flexi-wrap {
+    max-width: 640px;
+  }
+}
 
 .main-flexi-wrap {
   display: inline-block;
@@ -83,6 +88,13 @@ main > h1 {
     max-width: 640px;
     padding-top: 1rem;
   }
+}
+
+.blog-post-nav-flexi-wrap {
+  display: flex;
+  justify-content: space-between;
+  border-top:  1px solid #000;
+  padding-top: 1rem;
 }
 
 .pagination {
