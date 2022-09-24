@@ -30,6 +30,10 @@ a:visited {
   color:#333
 }
 
+nav > h1 {
+  margin-bottom: 0.5rem;
+}
+
 main > h1 {
   margin-bottom: 0.5rem;
 }
@@ -37,12 +41,14 @@ main > h1 {
 .flexerrific-flexifier {
   display: flex;
   padding-top: 1rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
 }
 @media screen and (min-width:1025px) {
   .flexerrific-flexifier {
     flex-direction: row;
-    align-items: center;
-    justify-content: cente r;
+    justify-content: center;
+    align-items: first baseline;
   }
 }
 @media screen and (max-width:1024px) {
@@ -57,28 +63,24 @@ main > h1 {
   padding-bottom: 1rem;
   border-bottom: 1px solid #000;
 }
-@media screen and (max-width:1024px) {
-  .nav-flexi-wrap {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-}
-
 @media screen and (min-width:1025px) {
-  .spacer {
-    width: 100px;
+  .nav-flexi-wrap {
+    margin-right: 2rem;
   }
 }
 
 .main-flexi-wrap {
   display: inline-block;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  margin-top: auto;
-  margin-bottom: auto;
+}
+@media screen and (min-width:1025px) {
+  .main-flexi-wrap {
+    width: 640px;
+    margin-left: 2rem;
+  }
 }
 @media screen and (max-width:1024px) {
   .main-flexi-wrap {
+    max-width: 640px;
     padding-top: 1rem;
   }
 }
