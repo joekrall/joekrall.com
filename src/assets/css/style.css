@@ -65,7 +65,7 @@ main > h1 {
 }
 @media screen and (min-width:1025px) {
   .nav-flexi-wrap {
-    margin-right: 2rem;
+    margin-right: 12rem;
   }
 }
 @media screen and (max-width:1024px) {
@@ -80,7 +80,7 @@ main > h1 {
 @media screen and (min-width:1025px) {
   .main-flexi-wrap {
     width: 640px;
-    margin-left: 2rem;
+    /* margin-left: 3rem; */
   }
 }
 @media screen and (max-width:1024px) {
@@ -90,11 +90,9 @@ main > h1 {
   }
 }
 
-.blog-post-nav-flexi-wrap {
+.blog-post-flexi-wrap {
   display: flex;
   justify-content: space-between;
-  border-top:  1px solid #000;
-  padding-top: 1rem;
 }
 
 .pagination {

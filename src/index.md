@@ -1,9 +1,9 @@
 ---
 layout: base
-title: Home
+title: "About"
 tags: page
 ---
 
-# Welcome
+# About Me
 
-This is a site built with [Eleventy](https://www.11ty.io/).
+Joe Krall is a husband, software engineer, reader, and occasional musician.
