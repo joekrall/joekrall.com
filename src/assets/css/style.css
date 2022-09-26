@@ -40,6 +40,7 @@ main > h1 {
 
 .flexerrific-flexifier {
   display: flex;
+  padding-bottom: 3rem;
   margin-left: 6rem;
   margin-right: 6rem;
 }
@@ -47,47 +48,53 @@ main > h1 {
   .flexerrific-flexifier {
     flex-direction: row;
     justify-content: center;
-    align-items: first baseline;
     padding-top: 3rem;
   }
 }
 @media screen and (max-width:1024px) {
   .flexerrific-flexifier {
-    padding-top: 1rem;
     flex-direction: column;
+    padding-top: 1rem;
   }
 }
 
-.nav-flexi-wrap {
-  position: relative;
-  display: inline-block;
+.nav-wrap {
   padding-bottom: 1rem;
   border-bottom: 1px solid #000;
 }
 @media screen and (min-width:1025px) {
-  .nav-flexi-wrap {
-    margin-right: 2rem;
+  .nav-wrap {
+    display: inline-block;
+    position: fixed;
+    top: 0px;
+    padding-top: 3rem;
+    margin-left: 3rem;
   }
 }
 @media screen and (max-width:1024px) {
-  .nav-flexi-wrap {
+  .nav-wrap {
+    display: block;
+    position: sticky;
+    top: 0px;
     max-width: 640px;
+    padding-top: 1.5rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    background-color: rgb(234, 233, 224);
   }
 }
 
-.main-flexi-wrap {
+.main-wrap {
   display: inline-block;
 }
 @media screen and (min-width:1025px) {
-  .main-flexi-wrap {
+  .main-wrap {
     width: 640px;
-    /* margin-left: 3rem; */
   }
 }
 @media screen and (max-width:1024px) {
-  .main-flexi-wrap {
+  .main-wrap {
     max-width: 640px;
-    padding-top: 1rem;
   }
 }
 
