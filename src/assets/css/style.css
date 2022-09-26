@@ -98,12 +98,7 @@ main > h1 {
   }
 }
 
-.blog-post-flexi-wrap {
+.space-between {
   display: flex;
   justify-content: space-between;
-}
-
-.pagination {
-  display: flex;
-  justify-content: space-around;
 }
