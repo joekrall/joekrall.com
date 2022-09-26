@@ -41,8 +41,8 @@ main > h1 {
 .flexerrific-flexifier {
   display: flex;
   padding-bottom: 3rem;
-  margin-left: 6rem;
-  margin-right: 6rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 @media screen and (min-width:1025px) {
   .flexerrific-flexifier {
@@ -78,8 +78,8 @@ main > h1 {
     top: 0px;
     max-width: 640px;
     padding-top: 1.5rem;
-    margin-left: 6rem;
-    margin-right: 6rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
     background-color: rgb(234, 233, 224);
   }
 }
