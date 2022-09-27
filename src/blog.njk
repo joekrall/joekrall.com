@@ -4,6 +4,7 @@ title: Blog
 tags: page
 ---
 
+<div class="post-list">
 {% for post in collections.post | reverse %}
     <div class="space-between">
         <div>
@@ -21,3 +22,4 @@ tags: page
         <time>{{ post.data.page.date.toLocaleDateString('en-US') }}</time>
     </div>
 {% endfor %}
+</div>

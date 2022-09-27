@@ -102,6 +102,10 @@ main > h1 {
   }
 }
 
+.post-list > div {
+  padding-bottom: 1rem;
+}
+
 .space-between {
   display: flex;
   justify-content: space-between;
@@ -113,6 +117,4 @@ main > h1 {
 
 .tags li {
   display: inline-block;
-  /* padding: .2em .5em;
-  background-color:rgb(180, 179, 173); */
 }
