@@ -18,6 +18,12 @@ body {
   line-height: 1.5;
 }
 
+p {
+  font-size: large;
+  font-weight: lighter;
+  line-height: 1.75;
+}
+
 a {
   color:#000;
   text-decoration-skip-ink: auto;
@@ -44,16 +50,17 @@ main > h1 {
   margin-left: 3rem;
   margin-right: 3rem;
 }
-@media screen and (min-width:1025px) {
+@media screen and (min-width:981px) {
   .flexerrific-flexifier {
     flex-direction: row;
     justify-content: center;
     padding-top: 3rem;
   }
 }
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
   .flexerrific-flexifier {
     flex-direction: column;
+    justify-content: center;
     padding-top: 1rem;
   }
 }
@@ -62,7 +69,7 @@ main > h1 {
   padding-bottom: 1rem;
   border-bottom: 1px solid #000;
 }
-@media screen and (min-width:1025px) {
+@media screen and (min-width:981px) {
   .nav-wrap {
     display: inline-block;
     position: fixed;
@@ -71,12 +78,12 @@ main > h1 {
     margin-left: 3rem;
   }
 }
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
   .nav-wrap {
     display: block;
     position: sticky;
     top: 0px;
-    max-width: 640px;
+    max-width: 500px;
     padding-top: 1.5rem;
     margin-left: 3rem;
     margin-right: 3rem;
@@ -87,14 +94,14 @@ main > h1 {
 .main-wrap {
   display: inline-block;
 }
-@media screen and (min-width:1025px) {
+@media screen and (min-width:981px) {
   .main-wrap {
-    width: 640px;
+    width: 500px;
   }
 }
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
   .main-wrap {
-    max-width: 640px;
+    max-width: 500px;
   }
 }
 
