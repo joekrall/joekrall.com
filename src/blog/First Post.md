@@ -6,6 +6,7 @@ tags:
 - first
 - test
 date: Created
+permalink: "{{ page.date | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
 ---
 
 # First Post

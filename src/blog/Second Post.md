@@ -5,6 +5,7 @@ tags:
 - post
 - second
 date: Created
+permalink: "{{ page.date | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
 ---
 
 # Second Post
