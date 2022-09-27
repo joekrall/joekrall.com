@@ -1,7 +1,10 @@
 ---
 title: First Post
 layout: blog
-tags: post
+tags: 
+- post
+- first
+- test
 date: Created
 ---
 

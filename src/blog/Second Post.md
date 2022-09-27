@@ -1,7 +1,9 @@
 ---
 title: Second Post
 layout: blog
-tags: post
+tags: 
+- post
+- second
 date: Created
 ---
 
