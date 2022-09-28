@@ -26,6 +26,11 @@ p, .content-wrap > ul {
   line-height: 1.75;
 }
 
+.content-wrap > ul {
+  margin-left: 1.25em;
+  padding-left: 1.25em;
+}
+
 a {
   color:#017dad;
   text-decoration-skip-ink: auto;
