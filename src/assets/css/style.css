@@ -20,9 +20,9 @@ body {
   margin-right: 3rem;
 }
 
-p {
+p, .content-wrap > ul {
   font-size: large;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
   line-height: 1.75;
 }
 
