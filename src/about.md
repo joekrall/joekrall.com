@@ -4,7 +4,9 @@ title: "About"
 tags: page
 ---
 
-Joe Krall is a husband, software engineer, and occasional musician and writer.
+I am a husband, software engineer, and occasional musician and writer.
+
+You can subscribe to this blog via [RSS](https://joekrall.com/feed.xml). You can also find me on [LinkedIn](https://www.linkedin.com/in/joekrall/) or [GitHub](https://github.com/joekrall).
 
 **Colophon**
 
