@@ -5,7 +5,7 @@ tags: page
 ---
 
 <div class="post-list">
-{% for post in collections.post | reverse %}
+{% for post in collections.posts | reverse %}
     <div class="space-between">
         <div>
             <h2>
@@ -13,7 +13,7 @@ tags: page
             </h2>
             <ul class="tags">
             {% for tag in post.data.tags -%}
-            {% if tag !== 'post' %}
+            {% if tag !== 'posts' %}
                 <li>{{ tag }}</li>{% if loop.last === false %},{% endif %}
             {% endif %}
             {%- endfor %}

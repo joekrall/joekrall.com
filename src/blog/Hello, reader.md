@@ -2,7 +2,7 @@
 title: Hello, reader
 layout: blog
 tags: 
-- post
+- posts
 date: Created
 permalink: "{{ page.date | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
 ---
