@@ -4,7 +4,7 @@ layout: blog
 tags: 
 - post
 date: Created
-permalink: "blog/{{ page.date | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
+permalink: "{{ page.date | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
 ---
 
 # Hello, reader
