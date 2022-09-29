@@ -34,7 +34,7 @@
     <content xml:lang="{{ metadata.language }}" type="html">
       {% if post.data.tags.includes('RSS Only') %}
       <i># It's a secret to everyone! <a href="https://daverupert.com/2018/01/welcome-to-rss-club/">Read more about RSS Club</a>.</i>
-      </p> <p>
+      <p> </p>
       {% endif %}
       {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
     </content>
