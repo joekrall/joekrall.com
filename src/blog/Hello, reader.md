@@ -3,7 +3,7 @@ title: Hello, reader
 layout: blog
 tags: 
 - posts
-date: Created
+date: git Last Modified
 permalink: "{{ page.date | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
 ---
 
