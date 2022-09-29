@@ -9,7 +9,7 @@ date: 2022-09-29
 permalink: "{{ page.date | postDate | date: '%Y/%m/%d' }}/hello-reader/"
 ---
 
-I started using RSS feeds in 2019, and they've helped me keep track of the more obscure and less active blogs. Setting up my own RSS feed? That was first on my to-do list after initial deployment. Seemed straightforward enough with [Eleventy's plugin](https://www.11ty.dev/docs/plugins/rss/).
+I started using RSS feeds in 2019, and they've helped me keep track of those more obscure and less active blogs. Setting up my own RSS feed? That was first on my to-do list after initial deployment. Seemed straightforward enough with [Eleventy's plugin](https://www.11ty.dev/docs/plugins/rss/).
 
 Upon plugging in my own feed on [The Old Reader](https://theoldreader.com/), I soon discovered a formatting goof. My initial "Hello, reader" post not only had a title in its template, but put its title in the content, which made for an infelicitous doubling:
 
@@ -30,12 +30,5 @@ I initially chalked this up to the vagaries of my feed reader's cache, but looki
 
 My solution is also two-fold: 
 
-- If you can't beat 'em, join 'em: I decided to use UTC across the project. [Luxon](https://moment.github.io/luxon/#/) is already one of Eleventy's dependencies. I just needed to update my `.eleventy.js` with a filter to consistently display my dates:
-
-  ```
-  // inside the eleventyConfig function
-  eleventyConfig.addFilter("postDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toUTC().toFormat('LLLL dd, yyyy');
-  });
-  ```
-- Despite my changes, though, my rascally permalink insisted that "Hello, reader" was created on September 29. Static dates to the rescue: I changed the date to `2022-09-28` and restored https://joekrall.com//2022/09/28/hello-reader/ to its full glory. Which left an open URL at https://joekrall.com//2022/09/29/hello-reader/. What better place to make an RSS-only feed? 
+- If you can't beat 'em, join 'em: I decided to use UTC across the project. [Luxon](https://moment.github.io/luxon/#/) is already one of Eleventy's dependencies. I just needed to update my `.eleventy.js` with a filter (modified with gratitude from Stephanie Eckles [11ty Rocks!](https://11ty.rocks/eleventyjs/dates/#postdate-filter)) to consistently display my dates.
+- Despite my changes, though, my rascally permalink insisted that "Hello, reader" was created on September 29. Static dates to the rescue: I changed the date to `2022-09-28` and restored [https://joekrall.com//2022/09/28/hello-reader/](https://joekrall.com//2022/09/28/hello-reader/) to its full glory. Which left an open URL at [https://joekrall.com//2022/09/29/hello-reader/](https://joekrall.com//2022/09/29/hello-reader/). What better place to make an RSS-only post? 
