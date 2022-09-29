@@ -34,10 +34,11 @@
     <content xml:lang="{{ metadata.language }}" type="html">
       {% if post.data.tags.includes('RSS Only') %}
       <aside class="notice">
-        <tt>It's a secret to everyone!
+        <em># It's a secret to everyone!
           <a href="https://daverupert.com/2018/01/welcome-to-rss-club/">Read more about RSS Club</a>.
-        </tt>
+        </em>
       </aside>
+      <br>
       {% endif %}
       {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
     </content>
