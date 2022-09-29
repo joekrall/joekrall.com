@@ -5,7 +5,7 @@ tags:
 - posts
 - RSS Only
 - code
-date: 2022-09-29
+date: 2022-09-29T07:00:00
 permalink: "{{ page.date | postDate | date: '%Y/%m/%d' }}/hello-reader/"
 ---
 
@@ -31,4 +31,4 @@ I initially chalked this up to the vagaries of my feed reader's cache, but looki
 My solution is also two-fold: 
 
 - If you can't beat 'em, join 'em: I decided to use UTC across the project. [Luxon](https://moment.github.io/luxon/#/) is already one of Eleventy's dependencies. I just needed to update my `.eleventy.js` with a filter (modified with gratitude from Stephanie Eckles [11ty Rocks!](https://11ty.rocks/eleventyjs/dates/#postdate-filter)) to consistently display my dates.
-- Despite my changes, though, my rascally permalink insisted that "Hello, reader" was created on September 29. Static dates to the rescue: I changed the date to `2022-09-28` and resuscitated [https://joekrall.com//2022/09/28/hello-reader/](https://joekrall.com//2022/09/28/hello-reader/). Which left an open URL at [https://joekrall.com//2022/09/29/hello-reader/](https://joekrall.com//2022/09/29/hello-reader/). I didn't want to leave another ghostly URL. So what better place to make an RSS-only post? 
+- Despite my changes, though, my rascally permalink insisted that "Hello, reader" was created on September 29. Static dates to the rescue: I changed the date to `2022-09-28T07:00:00` and resuscitated [https://joekrall.com//2022/09/28/hello-reader/](https://joekrall.com//2022/09/28/hello-reader/). (The `T07:00:00` is meant to account for for a not-so-mysterious seven hours discrepancy between the published date of the post on my site and the published date according to my feed reader, which uses my system locale.) This also left an open URL at [https://joekrall.com//2022/09/29/hello-reader/](https://joekrall.com//2022/09/29/hello-reader/). I didn't want to leave another ghostly URL. So what better place to make an RSS-only post? 
