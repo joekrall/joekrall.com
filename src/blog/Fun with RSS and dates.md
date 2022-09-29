@@ -3,7 +3,7 @@ title: Hello again, reader (or, fun with RSS and UTC)
 layout: blog
 tags: 
 - posts
-# - RSS Only
+- RSS Only
 - code
 date: 2022-09-29
 permalink: "{{ page.date | postDate | date: '%Y/%m/%d' }}/hello-reader/"
