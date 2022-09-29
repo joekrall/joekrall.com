@@ -33,9 +33,7 @@
     <id>{{ absolutePostUrl }}</id>
     <content xml:lang="{{ metadata.language }}" type="html">
       {% if post.data.tags.includes('RSS Only') %}
-      <p><em># It's a secret to everyone! <a href="https://daverupert.com/2018/01/welcome-to-rss-club/">Read more about RSS Club</a>.</em></p>
-      <br></br>
-      <br></br>
+      <aside><code># It's a secret to everyone! <a href="https://daverupert.com/2018/01/welcome-to-rss-club/">Read more about RSS Club</a>.</code></aside>
       {% endif %}
       {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
     </content>
