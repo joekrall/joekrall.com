@@ -6,6 +6,7 @@ tags: page
 
 <div class="post-list">
 {% for post in collections.posts | reverse %}
+  {% if not post.data.tags.includes('RSS Only') %}
     <div class="space-between">
         <div>
             <h2>
@@ -21,5 +22,6 @@ tags: page
         </div>
         <time>{{ post.data.page.date | postDate }}</time>
     </div>
+    {% endif %}
 {% endfor %}
 </div>
