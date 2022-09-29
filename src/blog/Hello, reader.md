@@ -4,7 +4,7 @@ layout: blog
 tags: 
 - posts
 date: 2022-09-28
-permalink: "2022/09/28/{{ title | slugify }}/"
+permalink: "{{ page.date | postDate | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
 ---
 
 The idea of a blog as a "commonplace," to take a [phrase](https://web.archive.org/web/20111228170618/https://dgmyers.blogspot.com/2009/02/foxs-apology.html) from one of the first blogs I read, is one that's stuck with me. After two years of coding and writing for much longer, I've found that I have things I'd like to remember and things I'd like to share. 

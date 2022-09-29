@@ -5,6 +5,6 @@ layout: base
 
 <h1>{{ pageHeaderTitle }}</h1>
 {{ content | safe }}
-{{ page.date }}.
+{{ page.date | postDate }}.
 <br>
 {% include "partials/_paginate.njk" %}
