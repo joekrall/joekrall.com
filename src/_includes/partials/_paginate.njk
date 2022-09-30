@@ -2,13 +2,13 @@
 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
 <br>
 <nav class="space-between">
-  {% if previousPost %}
-  <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+  {% if previousPost and not previousPost.data.tags.includes('RSS Only') %}
+  <span>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></span>
   {% else %}
   <br>
   {% endif %}
-  {% if nextPost %}
-  <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+  {% if nextPost and not nextPost.data.tags.includes('RSS Only') %}
+  <span>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></span>
   {% else %}
   <br>
   {% endif %}
