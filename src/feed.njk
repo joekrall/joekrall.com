@@ -31,12 +31,12 @@
     <link href="{{ absolutePostUrl }}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content xml:lang="{{ metadata.language }}" type="html"><![CDATA[
+    <content xml:lang="{{ metadata.language }}" type="html">
       {%- if post.data.tags.includes('RSS Only') -%}
-      <p><a href="https://daverupert.com/2018/01/welcome-to-rss-club/">Read more about RSS Club</a>.</em></p>
+      &lt;p&gt;&lt;em&gt;# It's a secret for everyone! &lt;a href=&quot;https://daverupert.com/2018/01/welcome-to-rss-club/&quot;&gt;Read more about RSS Club&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
       {%- endif -%}
       {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
-    ]]></content>
+    </content>
   </entry>
   {%- endfor %}
 </feed>
