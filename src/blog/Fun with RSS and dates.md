@@ -23,7 +23,7 @@ _Welp, time to adjust my blog layout to pull the title from the page! Great, now
 
 _Shoot, now my "Hello, reader" post shows up twice in the feed! At least the second one isn't a double-header_
 
-I initially chalked this up to the vagaries of my feed reader's cache, but looking at my `feed.xml` file, I could only see one "Hello, reader" entry, one that was updated September 29, 2022. It took a chunk of time to realize that that's neither when my post was written nor updated! Suddennly, one of Eleventy's [Common Pitfalls](https://www.11ty.dev/docs/dates/#dates-off-by-one-day) had become relevant. The problem was twofold: 
+I initially chalked this up to the vagaries of my feed reader's cache, but looking at my feed's XML file, I could only see one "Hello, reader" entry, one that was updated September 29, 2022. It took a chunk of time to realize that that's neither when my post was written nor updated! Suddennly, one of Eleventy's [Common Pitfalls](https://www.11ty.dev/docs/dates/#dates-off-by-one-day) had become relevant. The problem was twofold: 
 
 - That initial double-header post was created on September 28, 2022, UTC - not on September 27 (the date in my locale).
 - My permalink was dependent on a page's `Created` date, which meant that the second post lived at a subtly different URL - `/2022/09/29/` instead of `/2022/09/28`. (This became clear when I found my site opened on my phone, refreshed the page, and watched my first post's date leap forward a day.) I had effectively hosed my actual "first post," the ghost of which was commemorated on my feed reader.
