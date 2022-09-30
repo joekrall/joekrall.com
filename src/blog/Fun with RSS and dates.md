@@ -6,7 +6,7 @@ tags:
 - RSS Only
 - code
 date: 2022-09-29T07:00:00
-permalink: "{{ page.date | postDate | date: '%Y/%m/%d' }}/hello-reader/"
+permalink: "{{ page.date | postDate | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
 ---
 
 I started using RSS feeds in 2019, and they've helped me keep track of those more obscure and less active blogs. Setting up my own RSS feed? That was first on my to-do list after initial deployment. Seemed straightforward enough with [Eleventy's plugin](https://www.11ty.dev/docs/plugins/rss/).
@@ -30,5 +30,9 @@ I initially chalked this up to the vagaries of my feed reader's cache, but looki
 
 My solution is also two-fold: 
 
-- If you can't beat 'em, join 'em: I decided to use UTC across the project. [Luxon](https://moment.github.io/luxon/#/) is already one of Eleventy's dependencies. I just needed to update my `.eleventy.js` with a filter (modified with gratitude from Stephanie Eckles [11ty Rocks!](https://11ty.rocks/eleventyjs/dates/#postdate-filter)) to consistently display my dates.
-- Despite my changes, though, my rascally permalink insisted that "Hello, reader" was created on September 29. Static dates to the rescue: I changed the date to `2022-09-28T07:00:00` and resuscitated [https://joekrall.com//2022/09/28/hello-reader/](https://joekrall.com//2022/09/28/hello-reader/). (The `T07:00:00` is meant to account for for a not-so-mysterious seven hours discrepancy between the published date of the post on my site and the published date according to my feed reader, which uses my system locale.) This also left an open URL at [https://joekrall.com//2022/09/29/hello-reader/](https://joekrall.com//2022/09/29/hello-reader/). I didn't want to leave another ghostly URL. So what better place to make an RSS-only post? 
+- If you can't beat 'em, join 'em: I decided to use UTC across the project. [Luxon](https://moment.github.io/luxon/#/) is already one of Eleventy's dependencies. I just needed to update my `.eleventy.js` with a filter (modified with gratitude from Stephanie Eckles's [11ty Rocks!](https://11ty.rocks/eleventyjs/dates/#postdate-filter)) to consistently display my dates.
+- Despite my changes, though, my rascally permalink insisted that "Hello, reader" was created on September 29. Static dates to the rescue: I changed the date to `2022-09-28T07:00:00` and resuscitated [https://joekrall.com//2022/09/28/hello-reader/](https://joekrall.com//2022/09/28/hello-reader/). (The `T07:00:00` is meant to account for for a not-so-mysterious seven hours discrepancy between the published date of the post on my site and the published date according to my feed reader, which uses my system locale. Nothing like finding a needle of consistency in the haystack of chaos.) This also left an open URL at [https://joekrall.com//2022/09/29/hello-reader/](https://joekrall.com//2022/09/29/hello-reader/). I didn't want to leave another ghostly URL. So what better place to make an RSS-only post? (This was straightforward until I wanted to put that litle aside for RSS-only posts. I've now learned a lot about XML.) 
+
+For all that, I couldn't bust the cache of my feed reader, nor yours, I suspect. The double-header initial post and its double remained. So, with apologies to everyone following along, I changed the name of my feed from `feed.xml` to `atom.xml`. 😬
+
+Whew. Really simple syndication, eh?
