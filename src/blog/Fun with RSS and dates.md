@@ -28,11 +28,11 @@ I initially chalked this up to the vagaries of my feed reader's cache, but looki
 - That initial double-header post was created on September 28, 2022, UTC - not on September 27 (the date in my locale).
 - My permalink was dependent on a page's `Created` date, which meant that the second post lived at a subtly different URL - `/2022/09/29/` instead of `/2022/09/28`. (This became clear when I found my site opened on my phone, refreshed the page, and watched my first post's date leap forward a day.) I had effectively hosed my actual "first post," the ghost of which was commemorated on my feed reader.
 
-My solution is also two-fold: 
+My solution was also two-fold: 
 
 - If you can't beat 'em, join 'em: I decided to use UTC across the project. [Luxon](https://moment.github.io/luxon/#/) is already one of Eleventy's dependencies. I just needed to update my `.eleventy.js` with a filter (modified with gratitude from Stephanie Eckles's [11ty Rocks!](https://11ty.rocks/eleventyjs/dates/#postdate-filter)) to consistently display my dates.
 - Despite my changes, though, my rascally permalink insisted that "Hello, reader" was created on September 29. Static dates to the rescue: I changed the date to `2022-09-28T07:00:00` and resuscitated [https://joekrall.com/2022/09/28/hello-reader/](https://joekrall.com/2022/09/28/hello-reader/).
 
-For all that, I couldn't bust the cache of my feed reader, nor yours, I suspect. The double-header initial post and its double remained. So, with apologies to everyone following along, I changed the name of my feed from `feed.xml` to `atom.xml`. 😬
+For all that, I didn't bust the cache of my feed reader, nor yours, I suspect. The double-header initial post and its double remained. So, with apologies to everyone following along, I changed the name of my feed from `feed.xml` to `atom.xml`. 😬
 
-Whew. Really simple syndication, eh? What better place to make an RSS-only post? 
+Whew. Really simple syndication, eh? What better place to make an RSS-only post? Maybe someday soon I'll figure out how to bust that cache.
