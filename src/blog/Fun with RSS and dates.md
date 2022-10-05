@@ -5,7 +5,7 @@ tags:
 - posts
 - RSS Only
 - code
-date: 2022-09-29T07:00:00
+date: 2022-09-29T07:00:00-07:00
 permalink: "{{ page.date | postDate | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
 ---
 
