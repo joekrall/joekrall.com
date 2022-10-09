@@ -37,3 +37,5 @@ My solution was also two-fold:
 All this work didn't bust the cache neither my feed reader, nor yours, I suspect. The double-header initial post and its double remained. So, with apologies to everyone following along, I changed the name of my feed from `feed.xml` to `atom.xml`. 😬
 
 Whew. Really simple syndication, eh? What better place to make an RSS-only post?
+
+_Update_: With some adjustment, [this](https://github.com/chriskrycho/v5.chriskrycho.com/blob/80b560fe0e1ff14a5e0b76bd9de0aa744ed3988f/site/_includes/components/atom.njk#L23) helped bust the cache and fixed my typos. Thanks [@chriskrycho](https://github.com/chriskrycho)!

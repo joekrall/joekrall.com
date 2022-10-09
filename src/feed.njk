@@ -31,9 +31,9 @@
     <link href="{{ absolutePostUrl }}"/>
     {%- set updated -%}
       {% if post.data.updated -%}
-      {{post.data.updated | dateToRfc3339 }}
+      {{ post.data.updated | dateToRfc3339 }}
       {%- else -%}
-        {{post.date | dateToRfc3339}}
+        {{ post.date | dateToRfc3339 }}
       {%- endif -%}
     {%- endset -%}
     <published>{{ post.date | dateToRfc3339 }}</published>
