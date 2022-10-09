@@ -29,7 +29,15 @@
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    {%- set updated -%}
+      {% if post.data.updated -%}
+      {{post.data.updated | dateToRfc3339 }}
+      {%- else -%}
+        {{post.date | dateToRfc3339}}
+      {%- endif -%}
+    {%- endset -%}
+    <published>{{ post.date | dateToRfc3339 }}</published>
+    <updated>{{ updated }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content xml:lang="{{ metadata.language }}" type="html">
       {%- if post.data.tags.includes('RSS Only') -%}
