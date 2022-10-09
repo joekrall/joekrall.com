@@ -34,8 +34,8 @@ My solution was also two-fold:
 - I added a date filter. [Luxon](https://moment.github.io/luxon/#/) is already one of Eleventy's dependencies. I just needed to update my `.eleventy.js` with a filter (modified with gratitude from Stephanie Eckles's [11ty Rocks!](https://11ty.rocks/eleventyjs/dates/#postdate-filter)) to consistently display my dates.
 - Despite my changes, though, my rascally permalink insisted that "Hello, reader" was created on September 29. This was because I had been using Eleventy's `Created` key word to organize my posts. Static dates to the rescue: I changed the date to `2022-09-28T07:00:00` and resuscitated [https://joekrall.com/2022/09/28/hello-reader/](https://joekrall.com/2022/09/28/hello-reader/).
 
-All this work didn't bust the cache neither my feed reader, nor yours, I suspect. The double-header initial post and its double remained. So, with apologies to everyone following along, I changed the name of my feed from `feed.xml` to `atom.xml`. 😬
+All this work busted the cache of neither my feed reader, nor yours, I suspect. The double-header initial post and its double remained. So, with apologies to everyone following along, I changed the name of my feed from `feed.xml` to `atom.xml`. 😬
 
 Whew. Really simple syndication, eh? What better place to make an RSS-only post?
 
-_Update_: With some adjustment, [this](https://github.com/chriskrycho/v5.chriskrycho.com/blob/80b560fe0e1ff14a5e0b76bd9de0aa744ed3988f/site/_includes/components/atom.njk#L23) helped bust the cache and fixed my typos. Thanks [@chriskrycho](https://github.com/chriskrycho)!
+_Update_: [updating my `feed.xml`](https://github.com/chriskrycho/v5.chriskrycho.com/blob/80b560fe0e1ff14a5e0b76bd9de0aa744ed3988f/site/_includes/components/atom.njk#L23) helped bust the cache and fix my typos. Thanks [@chriskrycho](https://github.com/chriskrycho)!
