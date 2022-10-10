@@ -7,14 +7,14 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("isoDate", (dateObj) => {
     return DateTime
       .fromJSDate(dateObj, { zone: 'America/Los_Angeles' })
+      .toUTC()
       .toISO({ includeOffset: true });
   });
-  // eleventyConfig.addFilter("postDate", (dateStr) => {
-  //   return DateTime
-  //     .fromISO(dateStr)
-  //     .toUTC()
-  //     .toFormat('LLLL dd, yyyy');
-  // });
+  eleventyConfig.addFilter("postDate", (dateStr) => {
+    return DateTime
+      .fromISO(dateStr)
+      .toFormat('LLLL dd, yyyy');
+  });
 
   return {
       dir: { 
