@@ -7,7 +7,7 @@ tags:
 - code
 date: 2022-09-29T17:00:00-07:00
 updated: 2022-10-09T17:00:00-07:00
-permalink: "{{ page.date | isoDate | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
+permalink: "{{ page.date | isoDate | postDate | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
 ---
 
 I started using RSS feeds in 2019, and they've helped me keep track of those more obscure and less active blogs. Setting up my own RSS feed? That was first on my to-do list after initial deployment. Seemed straightforward enough with [Eleventy's plugin](https://www.11ty.dev/docs/plugins/rss/).
