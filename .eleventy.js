@@ -7,7 +7,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("isoDate", (dateObj) => {
     return DateTime
       .fromJSDate(dateObj)
-      .toString()
       .toISO({ extendedZone: true });
   });
   eleventyConfig.addFilter("postDate", (dateStr) => {
