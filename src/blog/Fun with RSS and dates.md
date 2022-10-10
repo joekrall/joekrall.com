@@ -5,8 +5,8 @@ tags:
 - posts
 - RSS Only
 - code
-date: 2022-09-29T07:00:00-07:00
-updated: 2022-10-09T23:00:00-07:00
+date: 2022-09-30T02:00:00
+updated: 2022-10-09T22:00:00
 permalink: "{{ page.date | isoDate | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
 ---
 
@@ -20,7 +20,7 @@ Upon plugging in my own feed on [The Old Reader](https://theoldreader.com/), I s
 
 <br>
 
-_Welp, time to adjust my blog layout to pull the title from the page! Great, now I no longer need to re-type the title ... let's push this up, deploy right away..._
+_Welp, time to adjust my blog layout! Great, now I no longer need to re-type the title ... let's push this up, deploy right away..._
 
 _Shoot, now my "Hello, reader" post shows up twice in the feed! At least the second one isn't a double-header..._
 
