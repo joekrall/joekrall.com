@@ -4,15 +4,8 @@ const { DateTime } = require("luxon");
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPassthroughCopy("src/assets/css/style.css");
-  eleventyConfig.addFilter("isoDate", (dateObj) => {
-    return DateTime
-      .fromJSDate(dateObj)
-      .toISO({ extendedZone: true });
-  });
-  eleventyConfig.addFilter("postDate", (dateStr) => {
-    return DateTime
-      .fromISO(dateStr)
-      .toFormat('LLLL dd, yyyy');
+  eleventyConfig.addFilter("postDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toUTC().toFormat('LLLL dd, yyyy');  
   });
 
   return {

@@ -31,12 +31,12 @@
     <link href="{{ absolutePostUrl }}"/>
     {%- set updated -%}
       {% if post.data.updated -%}
-      {{ post.data.updated | isoDate }}
+      {{ post.data.updated | dateToRfc3339}}
       {%- else -%}
-        {{ post.date | isoDate }}
+        {{ post.date | dateToRfc3339 }}
       {%- endif -%}
     {%- endset -%}
-    <published>{{ post.date | isoDate }}</published>
+    <published>{{ post.date | dateToRfc3339 }}</published>
     <updated>{{ updated }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content xml:lang="{{ metadata.language }}" type="html">
