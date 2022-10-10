@@ -9,12 +9,12 @@ module.exports = function(eleventyConfig) {
       .fromJSDate(dateObj, { zone: 'America/Los_Angeles' })
       .toISO({ includeOffset: true });
   });
-  eleventyConfig.addFilter("postDate", (dateStr) => {
-    return DateTime
-      .fromISO(dateStr)
-      .toUTC()
-      .toFormat('LLLL dd, yyyy');
-  });
+  // eleventyConfig.addFilter("postDate", (dateStr) => {
+  //   return DateTime
+  //     .fromISO(dateStr)
+  //     .toUTC()
+  //     .toFormat('LLLL dd, yyyy');
+  // });
 
   return {
       dir: { 
