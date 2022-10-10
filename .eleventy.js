@@ -6,8 +6,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/css/style.css");
   eleventyConfig.addFilter("isoDate", (dateObj) => {
     return DateTime
-      .fromJSDate(dateObj, { zone: 'America/Los_Angeles' })
-      .toISO();
+      .fromJSDate(dateObj)
+      .toISO({ includeOffset: true });
   });
   eleventyConfig.addFilter("postDate", (dateStr) => {
     return DateTime
