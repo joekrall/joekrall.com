@@ -12,6 +12,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("postDate", (dateStr) => {
     return DateTime
       .fromISO(dateStr)
+      .toUTC()
       .toFormat('LLLL dd, yyyy');
   });
 
