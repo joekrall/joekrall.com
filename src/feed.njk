@@ -19,7 +19,7 @@
   <subtitle>{{ metadata.subtitle }}</subtitle>
   <link href="{{ permalink | absoluteUrl(metadata.url) }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
-  <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <updated>{{ generated }}</updated>
   <id>{{ metadata.url }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
@@ -31,7 +31,7 @@
     <link href="{{ absolutePostUrl }}"/>
     {%- set updated -%}
       {% if post.data.updated -%}
-      {{ post.data.updated | dateToRfc3339}}
+      {{ post.data.updated | dateToRfc3339 }}
       {%- else -%}
         {{ post.date | dateToRfc3339 }}
       {%- endif -%}
