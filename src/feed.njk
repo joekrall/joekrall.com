@@ -1,6 +1,6 @@
 ---json
 {
-  "permalink": "feed.xml",
+  "permalink": "atom.xml",
   "eleventyExcludeFromCollections": true,
   "metadata": {
     "title": "joekrall.com",
@@ -19,7 +19,7 @@
   <subtitle>{{ metadata.subtitle }}</subtitle>
   <link href="{{ permalink | absoluteUrl(metadata.url) }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
-  <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <updated>{{ generated }}</updated>
   <id>{{ metadata.url }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
@@ -29,9 +29,22 @@
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    {%- set updated -%}
+      {% if post.data.updated -%}
+      {{ post.data.updated | dateToRfc3339 }}
+      {%- else -%}
+        {{ post.date | dateToRfc3339 }}
+      {%- endif -%}
+    {%- endset -%}
+    <published>{{ post.date | dateToRfc3339 }}</published>
+    <updated>{{ updated }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content xml:lang="{{ metadata.language }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+    <content xml:lang="{{ metadata.language }}" type="html">
+      {%- if post.data.tags.includes('RSS Only') -%}
+      &lt;p&gt;&lt;em&gt;# It's a secret for everyone! &lt;a href=&quot;https://daverupert.com/2018/01/welcome-to-rss-club/&quot;&gt;Read more about RSS Club&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+      {%- endif -%}
+      {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+    </content>
   </entry>
   {%- endfor %}
 </feed>

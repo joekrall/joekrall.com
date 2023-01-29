@@ -3,7 +3,7 @@ title: Hello, reader
 layout: blog
 tags: 
 - posts
-date: 2022-09-28
+date: 2022-09-28T17:00:00
 permalink: "{{ page.date | postDate | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
 ---
 

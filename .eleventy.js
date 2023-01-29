@@ -7,6 +7,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toUTC().toFormat('LLLL dd, yyyy');
   });
+  eleventyConfig.addGlobalData('generated', () => {
+    return DateTime.now().toUTC();
+  });
 
   return {
       dir: { 
