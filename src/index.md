@@ -1,9 +1,12 @@
 ---
 layout: base
-title: Home
+title: "About"
 tags: page
 ---
 
-# Welcome
+Joe Krall is a husband, software engineer, and occasional musician and writer.
 
-This is a site built with [Eleventy](https://www.11ty.io/).
+
+**Colophon**
+
+This website is built with [Eleventy](https://www.11ty.dev/).
