@@ -16,18 +16,24 @@ body {
   text-rendering: optimizeLegibility;
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.5;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+p {
+  font-size: large;
+  margin: 1rem 0;
+  line-height: 1.75;
 }
 
 a {
-  color:#000;
+  color:#017dad;
   text-decoration-skip-ink: auto;
   text-decoration: none;
 }
 a:hover {
+  opacity: 0.7;
   text-decoration: underline;
-}
-a:visited {
-  color:#333
 }
 
 nav > h1 {
@@ -38,54 +44,75 @@ main > h1 {
   margin-bottom: 0.5rem;
 }
 
-.flexerrific-flexifier {
+.main-flexifier {
   display: flex;
-  padding-top: 1rem;
-  margin-left: 6rem;
-  margin-right: 6rem;
+  padding-bottom: 3rem;
 }
-@media screen and (min-width:1025px) {
-  .flexerrific-flexifier {
+@media screen and (min-width:981px) {
+  .main-flexifier {
     flex-direction: row;
     justify-content: center;
-    align-items: first baseline;
+    padding-top: 3rem;
   }
 }
-@media screen and (max-width:1024px) {
-  .flexerrific-flexifier {
+@media screen and (max-width:980px) {
+  .main-flexifier {
     flex-direction: column;
-  }
-}
-
-.nav-flexi-wrap {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #000;
-}
-@media screen and (min-width:1025px) {
-  .nav-flexi-wrap {
-    margin-right: 2rem;
-  }
-}
-
-.main-flexi-wrap {
-  display: inline-block;
-}
-@media screen and (min-width:1025px) {
-  .main-flexi-wrap {
-    width: 640px;
-    margin-left: 2rem;
-  }
-}
-@media screen and (max-width:1024px) {
-  .main-flexi-wrap {
-    max-width: 640px;
+    justify-content: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 1rem;
   }
 }
 
-.pagination {
+.nav-block {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #000;
+}
+@media screen and (min-width:981px) {
+  .nav-block {
+    display: inline-block;
+    position: fixed;
+    top: 0px;
+    padding-top: 3rem;
+  }
+}
+@media screen and (max-width:980px) {
+  .nav-block {
+    display: block;
+    position: sticky;
+    top: 0px;
+    max-width: 500px;
+    padding-top: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(234, 233, 224);
+  }
+}
+
+.content-wrap {
+  display: inline-block;
+}
+@media screen and (min-width:981px) {
+  .content-wrap {
+    width: 500px;
+  }
+}
+
+.post-list > div {
+  padding-bottom: 1rem;
+}
+
+.space-between {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.tags {
+  list-style: none;
+}
+
+.tags li {
+  display: inline-block;
 }

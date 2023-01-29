@@ -1,7 +1,12 @@
 ---
 title: First Post
 layout: blog
-tags: post
+tags: 
+- post
+- first
+- test
+date: Created
+permalink: "blog/{{ page.date | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
 ---
 
 # First Post

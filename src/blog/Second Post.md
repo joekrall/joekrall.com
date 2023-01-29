@@ -1,7 +1,11 @@
 ---
 title: Second Post
 layout: blog
-tags: post
+tags: 
+- post
+- second
+date: Created
+permalink: "blog/{{ page.date | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
 ---
 
 # Second Post

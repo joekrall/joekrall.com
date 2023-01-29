@@ -2,10 +2,7 @@
 layout: base
 ---
 
-{{content| safe}}
+{{ content| safe }}
+{{ page.date.toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}.
+<br>
 {% include "partials/_paginate.njk" %}
-
-<br>
-<hr>
-<br>
-<a href="/blog">Blog Home</a>
