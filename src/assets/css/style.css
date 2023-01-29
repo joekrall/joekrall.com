@@ -1,0 +1,91 @@
+/* src/assets/css/style.css*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(234, 233, 224);
+  text-rendering: optimizeLegibility;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.5;
+}
+
+a {
+  color:#000;
+  text-decoration-skip-ink: auto;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  color:#333
+}
+
+nav > h1 {
+  margin-bottom: 0.5rem;
+}
+
+main > h1 {
+  margin-bottom: 0.5rem;
+}
+
+.flexerrific-flexifier {
+  display: flex;
+  padding-top: 1rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+@media screen and (min-width:1025px) {
+  .flexerrific-flexifier {
+    flex-direction: row;
+    justify-content: center;
+    align-items: first baseline;
+  }
+}
+@media screen and (max-width:1024px) {
+  .flexerrific-flexifier {
+    flex-direction: column;
+  }
+}
+
+.nav-flexi-wrap {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #000;
+}
+@media screen and (min-width:1025px) {
+  .nav-flexi-wrap {
+    margin-right: 2rem;
+  }
+}
+
+.main-flexi-wrap {
+  display: inline-block;
+}
+@media screen and (min-width:1025px) {
+  .main-flexi-wrap {
+    width: 640px;
+    margin-left: 2rem;
+  }
+}
+@media screen and (max-width:1024px) {
+  .main-flexi-wrap {
+    max-width: 640px;
+    padding-top: 1rem;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-around;
+}
