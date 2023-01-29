@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "eleventy --serve & tailwindcss -i ./src/css/tailwind.css -o ./_site/css/style.css --watch",
+    "build:prod": "eleventy & tailwindcss -i ./src/css/tailwind.css -o ./_site/css/style.css --minify"
   },
   "keywords": [],
   "author": "",
