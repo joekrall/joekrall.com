@@ -4,7 +4,6 @@ layout: blog
 tags: 
 - posts
 - RSS Only
-- code
 date: 2022-09-29T17:00:00
 updated: 2022-10-09T17:00:00
 permalink: "{{ page.date | postDate | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
