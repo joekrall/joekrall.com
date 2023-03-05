@@ -1,13 +1,11 @@
 <!-- _includes/partials/_navigation.njk-->
 <nav class="nav-block">
-    <h1>📚☕💻🍜🎹🙏🏼</h1>
-    <h1>Joe Krall</h1>
-    <ul>
-    {%- for item in collections.page -%}
-        <ul>
-            <a href="{{ item.url }}">{{ item.data.title }}</a>
-        </ul>
-    {%- endfor -%}
-    </ul>
+  <h1>📚☕💻🍜🎹🙏🏼</h1>
+  <h1>Joe Krall</h1>
+  {%- for item in collections.page -%}
+  <ul>
+    <a href="{{ item.url }}">{{ item.data.title }}</a>
+  </ul>
+  {%- endfor -%}
 </nav>
 

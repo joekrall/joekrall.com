@@ -49,12 +49,14 @@ main > h1 {
   margin-bottom: 0.5rem;
 }
 
-.main-flexifier {
-  display: flex;
-  padding-bottom: 3rem;
+time {
+  flex-shrink: 0;
 }
+
 @media screen and (min-width:981px) {
   .main-flexifier {
+    display: flex;
+    padding-bottom: 3rem;
     flex-direction: row;
     justify-content: center;
     padding-top: 3rem;
@@ -62,6 +64,8 @@ main > h1 {
 }
 @media screen and (max-width:980px) {
   .main-flexifier {
+    display: flex;
+    padding-bottom: 3rem;
     flex-direction: column;
     justify-content: center;
     max-width: 500px;
@@ -109,15 +113,12 @@ main > h1 {
   padding-bottom: 1rem;
 }
 
-.space-between {
+.post {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
-.tags {
-  list-style: none;
-}
-
-.tags li {
-  display: inline-block;
+.post a {
+  line-height: 0px;
 }
