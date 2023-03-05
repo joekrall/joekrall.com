@@ -7,7 +7,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toUTC().toFormat('LLLL dd, yyyy');
   });
-  eleventyConfig.addGlobalData('generated', () => {
+  eleventyConfig.addFilter("noRssOnlyPosts", (posts) => {
+    return posts.filter((post) => !post.data.tags.includes("RSS Only"));
+  });
+  eleventyConfig.addGlobalData("generated", () => {
     return DateTime.now().toUTC();
   });
 
