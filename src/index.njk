@@ -5,7 +5,8 @@ tags: page
 ---
 
 <div class="post-list">
-{% for post in collections.post | reverse %}
+{% for post in collections.posts | reverse %}
+  {% if not post.data.tags.includes('RSS Only') %}
     <div class="space-between">
         <div>
             <h2>
@@ -13,13 +14,14 @@ tags: page
             </h2>
             <ul class="tags">
             {% for tag in post.data.tags -%}
-            {% if tag !== 'post' %}
+            {% if tag !== 'posts' %}
                 <li>{{ tag }}</li>{% if loop.last === false %},{% endif %}
             {% endif %}
             {%- endfor %}
             </ul>
         </div>
-        <time>{{ post.data.page.date.toLocaleDateString('en-US') }}</time>
+        <time>{{ post.data.page.date | postDate }}</time>
     </div>
+    {% endif %}
 {% endfor %}
 </div>
