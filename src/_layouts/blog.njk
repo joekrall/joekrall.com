@@ -1,8 +1,10 @@
 ---
 layout: base
 ---
+{% set pageHeaderTitle = title %}
 
-{{ content| safe }}
-{{ page.date.toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}.
+<h1>{{ pageHeaderTitle }}</h1>
+{{ content | safe }}
+{{ page.date | postDate }}.
 <br>
 {% include "partials/_paginate.njk" %}
