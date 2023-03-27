@@ -31,6 +31,21 @@ p, .content-wrap > ul {
   padding-left: 1.25em;
 }
 
+.content-wrap > ol {
+  margin-left: 1.25em;
+}
+
+ul li {
+  font-size: large;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  line-height: 1.75;
+}
+
+.content-wrap h1 {
+  margin-bottom: 1rem;
+}
+
 a {
   color:#017dad;
   text-decoration-skip-ink: auto;
@@ -51,6 +66,15 @@ main > h1 {
 
 time {
   flex-shrink: 0;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+blockquote p {
+  border-left: 3px solid #8b8c87;
+  padding-left: 1rem;
 }
 
 @media screen and (min-width:981px) {
