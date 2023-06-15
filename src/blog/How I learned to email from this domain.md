@@ -3,8 +3,8 @@ title: How I learned to email from this domain
 layout: blog
 tags:
 - posts
-updated: 2023-03-27 10:00:00Z
-created: 2023-03-27 10:00:00Z
+updated: 2023-06-10 17:00:00Z
+date: 2023-03-27 10:00:00Z
 permalink: "{{ page.date | postDate | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
 ---
 
