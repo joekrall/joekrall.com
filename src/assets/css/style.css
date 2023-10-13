@@ -8,7 +8,16 @@
 }
 
 html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
   scroll-behavior: smooth;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
 }
 
 body {
@@ -16,23 +25,27 @@ body {
   text-rendering: optimizeLegibility;
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.5;
+  min-height: 100vh;
   margin-left: 3rem;
   margin-right: 3rem;
 }
 
-p, .content-wrap > ul {
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+p {
   font-size: large;
   margin-bottom: 1rem;
   line-height: 1.75;
-}
-
-.content-wrap > ul {
-  margin-left: 1.25em;
-  padding-left: 1.25em;
-}
-
-.content-wrap > ol {
-  margin-left: 1.25em;
 }
 
 ul li {
@@ -40,10 +53,6 @@ ul li {
   margin-bottom: 1rem;
   margin-left: 1rem;
   line-height: 1.75;
-}
-
-.content-wrap h1 {
-  margin-bottom: 1rem;
 }
 
 a {
@@ -122,6 +131,22 @@ blockquote p {
     margin-right: auto;
     background-color: rgb(234, 233, 224);
   }
+}
+
+.content-wrap h1 {
+  margin-bottom: 1rem;
+}
+
+.content-wrap > ul {
+  margin-left: 1.25em;
+  padding-left: 1.25em;
+  margin-bottom: 1rem;
+  font-size: large;
+  line-height: 1.75;
+}
+
+.content-wrap > ol {
+  margin-left: 1.25em;
 }
 
 .content-wrap {
