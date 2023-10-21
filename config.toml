@@ -1,0 +1,4 @@
+baseURL = 'https://joekrall.com/'
+languageCode = 'en-us'
+title = 'joekrall.com'
+disableKinds = ['taxonomy', 'term']
