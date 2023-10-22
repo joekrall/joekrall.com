@@ -1,10 +1,11 @@
 /* src/assets/css/style.css*/
+@import "./normalize.css";
+@import "./fonts.css";
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: inherit; 
 }
 
 html {
@@ -12,69 +13,43 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   scroll-behavior: smooth;
-}
-
-/* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
-  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: rgb(234, 233, 224);
   text-rendering: optimizeLegibility;
-  font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.5;
+  font-family: "PlexSerif", Georgia, "Times New Roman", serif;
   min-height: 100vh;
   margin-left: 3rem;
   margin-right: 3rem;
 }
 
-/* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
-  line-height: 1.1;
-}
-
-/* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
-  text-wrap: balance;
-}
-
 p {
-  font-size: large;
+  color: rgb(16, 15, 15);
+  font-size: 16px;
   margin-bottom: 1rem;
-  line-height: 1.75;
+  line-height: 1.4;
 }
 
 ul li {
-  font-size: large;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-  line-height: 1.75;
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 a {
-  color:#017dad;
+  color: rgb(16, 15, 15);
   text-decoration-skip-ink: auto;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover {
+  color: rgb(34, 142, 133);
   opacity: 0.7;
   text-decoration: underline;
 }
 
-nav > h1 {
-  margin-bottom: 0.5rem;
-}
-
-main > h1 {
-  margin-bottom: 0.5rem;
-}
-
 time {
-  flex-shrink: 0;
+  font-style: italic;
 }
 
 blockquote {
@@ -86,88 +61,105 @@ blockquote p {
   padding-left: 1rem;
 }
 
-@media screen and (min-width:981px) {
-  .main-flexifier {
-    display: flex;
-    padding-bottom: 3rem;
+.main-flexifier {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @media screen and (min-width:981px) {
+    padding-top: 4rem;
     flex-direction: row;
-    justify-content: center;
-    padding-top: 3rem;
-  }
-}
-@media screen and (max-width:980px) {
-  .main-flexifier {
-    display: flex;
-    padding-bottom: 3rem;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 1rem;
   }
 }
 
 .nav-block {
+  max-width: 500px;
+  background-color: rgb(234, 233, 224);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #000;
-}
-@media screen and (min-width:981px) {
-  .nav-block {
+  display: block;
+  position: relative;
+  z-index: 1;
+  top: 0px;
+  @media screen and (min-width:981px) {
+    padding-top: 4rem;
     display: inline-block;
     position: fixed;
-    top: 0px;
-    padding-top: 3rem;
-  }
-}
-@media screen and (max-width:980px) {
-  .nav-block {
-    display: block;
-    position: sticky;
-    top: 0px;
-    max-width: 500px;
-    padding-top: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgb(234, 233, 224);
   }
 }
 
-.content-wrap h1 {
-  margin-bottom: 1rem;
+.nav-block > :first-child {
+  margin-top: 0;
 }
 
-.content-wrap > ul {
-  margin-left: 1.25em;
-  padding-left: 1.25em;
-  margin-bottom: 1rem;
-  font-size: large;
-  line-height: 1.75;
+.nav-links {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
-.content-wrap > ol {
-  margin-left: 1.25em;
+.nav-links > li > a {
+  text-decoration: none;
 }
 
 .content-wrap {
   display: inline-block;
-}
-@media screen and (min-width:981px) {
-  .content-wrap {
+  @media screen and (min-width:981px) {
     width: 500px;
   }
 }
 
-.post-list > div {
-  padding-bottom: 1rem;
+.content-wrap > :first-child {
+  margin-top: 0;
 }
 
 .post {
+  padding-bottom: 1rem;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  @media screen and (min-width:981px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }
 
-.post a {
-  line-height: 0px;
+.post-title > a {
+  text-decoration: none;
+}
+
+.page-header-title {
+  margin-top: 0;
+}
+
+.page-content > ol {
+  padding-left: 20px;
+  @media screen and (min-width:981px) {
+    padding-left: 40px;
+  }
+}
+
+.page-content > ol > li > ul { 
+  padding-left: 20px;
+  @media screen and (min-width:981px) {
+    padding-left: 40px;
+  }
+}
+
+.page-content > ol > li > ul > li { 
+  margin-bottom: 1rem;
+}
+
+.footnotes > ol {
+  padding-left: 20px;
+  @media screen and (min-width:981px) {
+    padding-left: 40px;
+  }
 }

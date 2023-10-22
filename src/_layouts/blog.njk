@@ -3,8 +3,8 @@ layout: base
 ---
 {% set pageHeaderTitle = title %}
 
-<h1>{{ pageHeaderTitle }}</h1>
-{{ content | safe }}
-{{ page.date | postDate }}.
+<h2 class="page-header-title">{{ pageHeaderTitle }}</h2>
+<div class="page-content">{{ content | safe }}</div>
+<time>{{ page.date | postDate }}.</time>
 <br>
 {% include "partials/_paginate.njk" %}
