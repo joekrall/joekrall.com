@@ -17,23 +17,14 @@ html {
 }
 
 body {
+  color: rgb(16, 15, 15);
   background-color: rgb(234, 233, 224);
   text-rendering: optimizeLegibility;
   font-family: "PlexSerif", Georgia, "Times New Roman", serif;
+  font-size: 1rem;
   min-height: 100vh;
   margin-left: 3rem;
   margin-right: 3rem;
-}
-
-p {
-  color: rgb(16, 15, 15);
-  font-size: 16px;
-  margin-bottom: 1rem;
-  line-height: 1.4;
-}
-
-ul li {
-  font-size: 16px;
   line-height: 1.4;
 }
 
@@ -42,6 +33,7 @@ a {
   text-decoration-skip-ink: auto;
   text-decoration: underline;
 }
+
 a:hover {
   color: rgb(34, 142, 133);
   opacity: 0.7;
