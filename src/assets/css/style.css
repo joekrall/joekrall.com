@@ -22,7 +22,6 @@ body {
   text-rendering: optimizeLegibility;
   font-family: "PlexSerif", Georgia, "Times New Roman", serif;
   font-size: 1rem;
-  min-height: 100vh;
   margin-left: 3rem;
   margin-right: 3rem;
   line-height: 1.4;
@@ -78,8 +77,6 @@ blockquote p {
   border-bottom: 1px solid #000;
   display: block;
   position: relative;
-  z-index: 1;
-  top: 0px;
   @media screen and (min-width:981px) {
     padding-top: 4rem;
     display: inline-block;
