@@ -88,6 +88,10 @@ blockquote p {
   margin-top: 0;
 }
 
+.nav-title > a {
+  text-decoration: none;
+}
+
 .nav-links {
   list-style: none;
   margin-bottom: 0;
