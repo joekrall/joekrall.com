@@ -1,3 +1,0 @@
-[submodule "src/joe"]
-	path = src/joe
-	url = git@github.com:joekrall/joe.git
