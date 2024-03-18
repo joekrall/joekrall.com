@@ -14,4 +14,4 @@ This website is built with [Eleventy](https://www.11ty.dev/). Its typeface is [I
 
 **Copyright and License**
 
-All content is copyright Joe Krall, 2022 – 2023 under a [Creative Commons Attribution 4.0 license](http://creativecommons.org/licenses/by/4.0/deed.en_US). All custom software components are copyright Joe Krall, 2022 – 2023 under a MIT license.
+All content is copyright Joe Krall, 2022 – 2024 under a [Creative Commons Attribution 4.0 license](http://creativecommons.org/licenses/by/4.0/deed.en_US). All custom software components are copyright Joe Krall, 2022 – 2023 under a MIT license.
