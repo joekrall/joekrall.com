@@ -2,7 +2,7 @@ const rss = require("@11ty/eleventy-plugin-rss");
 const footnote = require("markdown-it-footnote");
 const { DateTime } = require("luxon");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(rss);
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
   eleventyConfig.addPassthroughCopy("src/assets/css/normalize.css");
@@ -17,15 +17,15 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addGlobalData("generated", () => {
     return DateTime.now().toUTC();
   });
-  eleventyConfig.amendLibrary("md", mdLib => mdLib.use(footnote));
+  eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(footnote));
 
   return {
-      dir: { 
-        input: "src",
-        data: "_data",
-        includes: "_includes",
-        layouts: "_layouts",
-        output: "_site",
-      }
-  }; 
+    dir: {
+      input: "src",
+      data: "_data",
+      includes: "_includes",
+      layouts: "_layouts",
+      output: "_site",
+    },
+  };
 };
