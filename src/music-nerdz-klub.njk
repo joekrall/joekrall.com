@@ -1,0 +1,15 @@
+---
+layout: base
+title: Music Nerdz Klub
+---
+
+<div class="post-list">
+{% for r in collections.reviews | reverse %}
+  <div class="post">
+    <div class="post-title">
+      <a href="{{ r.url }}">{{ r.data.title }}</a>
+    </div>
+    <time>{{ r.data.page.date | postDate }}</time>
+  </div>
+{% endfor %}
+</div>

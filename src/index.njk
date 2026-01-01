@@ -6,7 +6,7 @@ tags: page
 
 <div class="post-list">
 {% for post in collections.posts | reverse %}
-{% if not post.data.tags.includes('RSS Only') %}
+{% if not post.data.tags.includes('RSS Only') and not post.data.tags.includes('reviews') %}
   <div class="post">
     <div class="post-title">
       <a href="{{ post.url }}">{{ post.data.title }}</a>

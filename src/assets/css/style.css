@@ -5,7 +5,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit; 
+  box-sizing: inherit;
 }
 
 html {
@@ -52,6 +52,11 @@ blockquote p {
   padding-left: 1rem;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .main-flexifier {
   max-width: 500px;
   margin-left: auto;
@@ -61,7 +66,7 @@ blockquote p {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  @media screen and (min-width:981px) {
+  @media screen and (min-width: 981px) {
     padding-top: 4rem;
     flex-direction: row;
   }
@@ -77,7 +82,7 @@ blockquote p {
   border-bottom: 1px solid #000;
   display: block;
   position: relative;
-  @media screen and (min-width:981px) {
+  @media screen and (min-width: 981px) {
     padding-top: 4rem;
     display: inline-block;
     position: fixed;
@@ -104,7 +109,7 @@ blockquote p {
 
 .content-wrap {
   display: inline-block;
-  @media screen and (min-width:981px) {
+  @media screen and (min-width: 981px) {
     width: 500px;
   }
 }
@@ -117,7 +122,7 @@ blockquote p {
   padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  @media screen and (min-width:981px) {
+  @media screen and (min-width: 981px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
@@ -134,25 +139,25 @@ blockquote p {
 
 .page-content > ol {
   padding-left: 20px;
-  @media screen and (min-width:981px) {
+  @media screen and (min-width: 981px) {
     padding-left: 40px;
   }
 }
 
-.page-content > ol > li > ul { 
+.page-content > ol > li > ul {
   padding-left: 20px;
-  @media screen and (min-width:981px) {
+  @media screen and (min-width: 981px) {
     padding-left: 40px;
   }
 }
 
-.page-content > ol > li > ul > li { 
+.page-content > ol > li > ul > li {
   margin-bottom: 1rem;
 }
 
 .footnotes > ol {
   padding-left: 20px;
-  @media screen and (min-width:981px) {
+  @media screen and (min-width: 981px) {
     padding-left: 40px;
   }
 }

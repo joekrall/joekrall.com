@@ -1,0 +1,15 @@
+{% set previousReview = collections.reviews | getPreviousCollectionItem(page) %}
+{% set nextReview = collections.reviews | getNextCollectionItem(page) %}
+<br>
+<nav class="post">
+  {% if previousReview %}
+  <span>Previous: <a href="{{ previousReview.url }}">{{ previousReview.data.title }}</a></span>
+  {% else %}
+  <br>
+  {% endif %}
+  {% if nextReview %}
+  <span>Next: <a href="{{ nextReview.url }}">{{ nextReview.data.title }}</a></span>
+  {% else %}
+  <br>
+  {% endif %}
+</nav>
