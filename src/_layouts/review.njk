@@ -5,6 +5,6 @@ layout: base
 
 <h2 class="page-header-title">{{ pageHeaderTitle }}</h2>
 <div class="page-content">{{ content | safe }}</div>
-<time>{{ page.date | postDate }}.</time>
+<time>{{ page.date | postDate }}{% if updated %}, rev. {{ updated | postDate }}{% endif %}.</time>
 <br>
 {% include "partials/_paginate_reviews.njk" %}

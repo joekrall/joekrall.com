@@ -11,7 +11,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/css/fonts.css");
   eleventyConfig.addPassthroughCopy("src/assets/css/style.css");
   eleventyConfig.addFilter("postDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toUTC().toFormat("LLLL dd, yyyy");
+    return DateTime.fromJSDate(dateObj).toUTC().toFormat("LLLL d, yyyy");
   });
   eleventyConfig.addFilter("noRssOnlyPosts", (posts) => {
     return posts.filter((post) => !post.data.tags.includes("RSS Only"));
