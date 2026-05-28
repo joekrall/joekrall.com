@@ -1,11 +1,13 @@
-const rss = require("@11ty/eleventy-plugin-rss");
-const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+const { rssPlugin: rss } = require("@11ty/eleventy-plugin-rss");
+const {
+  eleventyImageTransformPlugin: imageTransform,
+} = require("@11ty/eleventy-img");
 const footnote = require("markdown-it-footnote");
 const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(rss);
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+  eleventyConfig.addPlugin(imageTransform);
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
   eleventyConfig.addPassthroughCopy("src/assets/css/normalize.css");
   eleventyConfig.addPassthroughCopy("src/assets/css/fonts.css");
